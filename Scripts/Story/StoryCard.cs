@@ -4,10 +4,16 @@ namespace Alexandria.Story;
 
 public partial class StoryCard : PanelContainer
 {
-    [Export] private RichTextLabel _cardDescription;
     [Export] private Label _cardTitle;
+    [Export] private RichTextLabel _cardDescription;
 
+    [Export] private StoryData _testStory;
     private StoryData _currentStory; //Store a reference to the story event
+
+    public override void _Ready()
+    {
+        Initialize(_testStory);
+    }
 
     public void Initialize(StoryData storyData)
     {

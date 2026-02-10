@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://qk10fj1t2l2d"]
 
 [ext_resource type="Texture2D" uid="uid://dhg21m8wnsf7y" path="res://assets/interface/Blank_.png" id="1_xnqpq"]
+[ext_resource type="Script" uid="uid://blblcrt04n85f" path="res://scripts/story/StoryCard.cs" id="1_xwbep"]
+[ext_resource type="Resource" uid="uid://bdn25rtesmsgf" path="res://story/test/test_storydata.tres" id="2_oe7vo"]
 [ext_resource type="Theme" uid="uid://b8em5mcmgx1js" path="res://assets/interface/UI_Card.theme" id="2_q34xm"]
 
 [node name="Control" type="Control" unique_id=1982574748]
@@ -8,13 +10,19 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -994.0
+offset_bottom = -439.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=438107278]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=438107278 node_paths=PackedStringArray("_cardTitle", "_cardDescription")]
 layout_mode = 0
 offset_right = 158.0
 offset_bottom = 209.0
+script = ExtResource("1_xwbep")
+_cardTitle = NodePath("TextureRect/VBoxContainer/Label")
+_cardDescription = NodePath("TextureRect/VBoxContainer/RichTextLabel")
+_testStory = ExtResource("2_oe7vo")
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=885051413]
 layout_mode = 2
@@ -28,13 +36,13 @@ offset_bottom = 209.0
 [node name="Label" type="Label" parent="PanelContainer/TextureRect/VBoxContainer" unique_id=2056919166]
 layout_mode = 2
 theme = ExtResource("2_q34xm")
-text = "CARD TITLE"
+text = "TITLE"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/TextureRect/VBoxContainer" unique_id=1446008025]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_q34xm")
-text = "This is some test text to see if this works."
+text = "CONTENT"
 scroll_active = false
 horizontal_alignment = 1

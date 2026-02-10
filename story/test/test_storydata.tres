@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StoryData" format=3 uid="uid://bdn25rtesmsgf"]
+
+[ext_resource type="Script" uid="uid://dk2dsvbpl5xjl" path="res://scripts/story/StoryData.cs" id="1_00qm6"]
+[ext_resource type="Resource" uid="uid://qpds2q8xw3i5" path="res://story/test/test_storytag.tres" id="1_ounsg"]
+
+[resource]
+script = ExtResource("1_00qm6")
+Title = "Test Story Card"
+ShortContent = "This is a test story card that we are trying to load data from."
+NarrativeTag = ExtResource("1_ounsg")
+MatchingTags = Array[Object]([])
+metadata/_custom_type_script = "uid://dk2dsvbpl5xjl"
