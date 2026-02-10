@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qk10fj1t2l2d"]
 
-[ext_resource type="Texture2D" uid="uid://dhg21m8wnsf7y" path="res://Assets/UI/Blank_.png" id="1_leyw5"]
-[ext_resource type="Theme" uid="uid://b8em5mcmgx1js" path="res://Assets/UI/UI_Card.theme" id="2_exqa3"]
+[ext_resource type="Texture2D" uid="uid://dhg21m8wnsf7y" path="res://assets/interface/Blank_.png" id="1_xnqpq"]
+[ext_resource type="Theme" uid="uid://b8em5mcmgx1js" path="res://assets/interface/UI_Card.theme" id="2_q34xm"]
 
 [node name="Control" type="Control" unique_id=1982574748]
 layout_mode = 3
@@ -18,7 +18,7 @@ offset_bottom = 209.0
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=885051413]
 layout_mode = 2
-texture = ExtResource("1_leyw5")
+texture = ExtResource("1_xnqpq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/TextureRect" unique_id=836497146]
 layout_mode = 0
@@ -27,14 +27,14 @@ offset_bottom = 209.0
 
 [node name="Label" type="Label" parent="PanelContainer/TextureRect/VBoxContainer" unique_id=2056919166]
 layout_mode = 2
-theme = ExtResource("2_exqa3")
+theme = ExtResource("2_q34xm")
 text = "CARD TITLE"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/TextureRect/VBoxContainer" unique_id=1446008025]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_exqa3")
+theme = ExtResource("2_q34xm")
 text = "This is some test text to see if this works."
 scroll_active = false
 horizontal_alignment = 1

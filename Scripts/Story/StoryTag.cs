@@ -1,5 +1,7 @@
 using Godot;
 
+namespace Alexandria.Story;
+
 [GlobalClass]
 public partial class StoryTag : Resource
 {
