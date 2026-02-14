@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://doe8mc6fwva23"]
+
+[ext_resource type="Script" uid="uid://bod1ct0i26x07" path="res://scripts/story/TimelineManager.cs" id="1_7rqrb"]
+[ext_resource type="PackedScene" uid="uid://qk10fj1t2l2d" path="res://scenes/interface/UI_Card.tscn" id="1_wgx1w"]
+[ext_resource type="Script" uid="uid://deetkdwhhraab" path="res://scripts/story/ConnectionManager.cs" id="1_x8u4b"]
+
+[node name="Timeline Canvas" type="Control" unique_id=335223958 node_paths=PackedStringArray("CardContainerNode")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7rqrb")
+CardScene = ExtResource("1_wgx1w")
+CardContainerNode = NodePath("Card Container")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1224873598]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.09, 0.09, 0.09, 1)
+
+[node name="Connection Manager" type="Control" parent="." unique_id=1297858451]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_x8u4b")
+
+[node name="Card Container" type="Control" parent="." unique_id=2038852975]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
+[connection signal="child_entered_tree" from="Card Container" to="Connection Manager" method="OnCardAddedToTree"]
+[connection signal="child_exiting_tree" from="Card Container" to="Connection Manager" method="OnCardRemovedFromTree"]

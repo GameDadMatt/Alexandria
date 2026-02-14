@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ciyd76tmwf3ne"]
+
+[ext_resource type="Texture2D" uid="uid://dhg21m8wnsf7y" path="res://assets/interface/Blank_.png" id="1_i8nnb"]
+[ext_resource type="Script" uid="uid://vjajm3jf5svk" path="res://scripts/story/ConnectionHandle.cs" id="1_t4dvr"]
+
+[node name="ConnectionHandle" type="Control" unique_id=747317373]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1888.0
+offset_bottom = -1048.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t4dvr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1923950485]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_i8nnb")
+expand_mode = 1
+script = ExtResource("1_t4dvr")
